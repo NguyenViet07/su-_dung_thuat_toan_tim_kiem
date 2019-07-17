@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let myArr = ["0913424872","0968497642","0987465740","0397259781","0871523917"];
+    let viettelArr = [];
+    let reg1 = /^[0][9][6][0-9]{7}$/;
+    let reg2 = /^[0][9][8][0-9]{7}$/;
+    let reg3 = /^[0][3][0-9]{8}$/;
+    for (let i = 0; i<= myArr.length; i++){
+        if (reg1.test(myArr[i])||reg2.test(myArr[i])||reg3.test(myArr[i])){
+            viettelArr.push(myArr[i]);
+        }
+    }
+    if (viettelArr.length !== 0) {
+        alert(viettelArr);
+    } else
+        alert("không có số viettel nào.")
+</script>
+
+</body>
+</html>
